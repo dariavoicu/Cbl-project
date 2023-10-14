@@ -1,8 +1,9 @@
 package com.cbl.demo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Story {
+public class Story implements Serializable {
     private String text;
     private List<Choice> choices;
 
@@ -27,4 +28,8 @@ public class Story {
         this.choices = choices;
     }
 
+    @Override
+    public String toString() {
+        return text.length() <= 30 ? text : text.substring(0, 30) + "...";
+    }
 }

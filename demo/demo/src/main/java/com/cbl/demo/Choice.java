@@ -1,6 +1,8 @@
 package com.cbl.demo;
 
-public class Choice {
+import java.io.Serializable;
+
+public class Choice implements Serializable {
     private String text;
     private Story nextStory;
 
